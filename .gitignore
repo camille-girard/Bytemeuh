@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+
+ESGI/src/.DS_Store
+ESGI/src/.idea
+ESGI/style.css
+ESGI/style.css.map
+node_modules/

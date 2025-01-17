@@ -1,0 +1,183 @@
+.contacts-content {
+  .page-subtitle, .contact-info {
+    margin-left: rem(160);
+    @media (max-width: 1440px) {
+      margin: 0 rem(80);
+    }
+    @media (max-width: 768px) {
+      margin: 0 rem(40);
+    }
+    @media (max-width: 480px) {
+      margin: 0 rem(20);
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: rem(159);
+    margin-top: rem(50);
+    @media (max-width: 1440px) {
+      padding-right: rem(80);
+    }
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0;
+      .contact-item {
+        align-items: center;
+        padding-right: 0;
+      }
+    }
+    @media (max-width: 480px) {
+      padding-right: 0;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: rem(75);
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+      }
+      p {
+        margin: 0 0 rem(5) 0;
+        @include p20;
+      }
+      @media (max-width: 900px) {
+        align-items: center;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+// Style pour le formulaire de contact
+.form-content {
+  margin: 0 rem(159);
+  margin-bottom: rem(160);
+
+  h2 {
+    font-family: "Mulish", sans-serif;
+    font-size: calc(84 / 16 * 1rem);
+    line-height: calc(105.42 / 16 * 1rem);
+    font-weight: 600;
+    color: rgba(5, 10, 58, 1);
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: "Mulish", sans-serif;
+    font-size: calc(26 / 16 * 1rem);
+    line-height: calc(42 / 16 * 1rem);
+    font-weight: 400;
+    color: rgba(138, 138, 138, 1);
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    .form-group.half-width {
+      width: rem(502);
+      margin-right: rem(50);
+      @media (max-width: 500px) {
+        width: rem(300);
+      }
+    }
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
+  .form-group.full-width {
+    width: rem(1052);
+    @media (max-width: 1230px) {
+      width: rem(502);
+    }
+    @media (max-width: 500px) {
+      width: rem(300);
+    }
+  }
+
+  .form-group {
+    input,
+    textarea {
+      padding: rem(10);
+      border: none;
+      border-bottom: rem(1) solid #ccc;
+      font-family: "Mulish", sans-serif;
+      font-size: rem(20);
+      line-height: calc(19.53 / 16 * 1rem);
+      font-weight: 400;
+      width: 100%;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+        border-bottom: rem(2) solid rgba(5, 10, 58, 1);
+      }
+    }
+
+    &.input-group {
+      margin-right: rem(10);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  textarea.wpcf7-form-control.wpcf7-textarea {
+    height: rem(178);
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,
+  input.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email,
+  input.wpcf7-form-control.wpcf7-tel.wpcf7-text.wpcf7-validates-as-tel {
+    width: 100%;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(138, 138, 138, 1);
+  }
+
+  input[type="submit"] {
+    background-color: transparent;
+    color: var(--main-color);
+    padding: rem(10) rem(20);
+    border: none;
+    border-radius: rem(4);
+    cursor: pointer;
+    font-family: $font;
+    font-size: rem(20);
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: rgba(5, 10, 58, 0.1);
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    border-bottom: rem(2) solid var(--main-color);
+  }
+}
+
+@media (max-width: 1440px) {
+  .form-content {
+    margin: 0 rem(80);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-content {
+    margin: 0 rem(40);
+  }
+}
+

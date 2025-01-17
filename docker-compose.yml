@@ -1,0 +1,44 @@
+services:
+  db:
+    image: mariadb:10.6.4-focal
+    command: "--default-authentication-plugin=mysql_native_password"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=esgi2024
+      - MYSQL_DATABASE=esgi
+      - MYSQL_USER=esgiuser
+      - MYSQL_PASSWORD=esgipass
+    expose:
+      - 3306
+      - 33060
+  wordpress:
+    build: .
+    volumes:
+      - type: bind
+        source: ./ESGI
+        target: /var/www/html/wp-content/themes/ESGI
+      - type: bind
+        source: ./plugins
+        target: /var/www/html/wp-content/plugins
+      - type: bind
+        source: ./uploads
+        target: /var/www/html/wp-content/uploads
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=esgiuser
+      - WORDPRESS_DB_PASSWORD=esgipass
+      - WORDPRESS_DB_NAME=esgi
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8000:8080
+volumes:
+  db_data:
+  wp_data:

@@ -1,0 +1,16 @@
+{
+  "name": "projet-wp-esgi",
+  "version": "1.0.0",
+  "description": "School Project for Panorama CMS",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch ./ESGI/src/main.scss ./ESGI/style.css",
+    "build": "sass ./ESGI/src/main.scss ./ESGI/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}

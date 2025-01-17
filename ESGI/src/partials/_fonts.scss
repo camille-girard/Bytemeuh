@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$font: "Mulish", sans-serif;
+
+@mixin heading1 {
+	font-family: $font;
+	font-size: rem(84);
+	line-height: rem(105.42);
+	font-weight: 600;
+
+	@media (max-width: 1440px) {
+		font-size: rem(70);
+		line-height: rem(88);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(60);
+		line-height: rem(75);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(50);
+		line-height: rem(62.5);
+	}
+}
+
+@mixin heading2 {
+	font-family: $font;
+	font-size: rem(63);
+	line-height: rem(79.07);
+	letter-spacing: rem(3);
+	font-weight: 600;
+	margin-bottom: rem(30);
+
+	@media (max-width: 1440px) {
+		font-size: rem(54);
+		line-height: rem(67.59);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(45);
+		line-height: rem(56.25);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(36);
+		line-height: rem(45);
+	}
+}
+
+@mixin heading3 {
+	font-family: $font;
+	font-size: rem(47);
+	line-height: rem(58.99);
+	font-weight: 600;
+
+	@media (max-width: 1440px) {
+		font-size: rem(40);
+		line-height: rem(50);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(33);
+		line-height: rem(41.25);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(26);
+		line-height: rem(32.5);
+	}
+}
+
+@mixin heading4 {
+	font-family: $font;
+	font-size: rem(35);
+	line-height: rem(43.93);
+	letter-spacing: 0.03em;
+	font-weight: 600;
+
+	@media (max-width: 1440px) {
+		font-size: rem(30);
+		line-height: rem(37.5);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(25);
+		line-height: rem(31.25);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(20);
+		line-height: rem(25);
+	}
+}
+
+@mixin heading5 {
+	font-family: $font;
+	font-size: rem(27);
+	line-height: rem(33.89);
+	font-weight: 700;
+
+	@media (max-width: 1440px) {
+		font-size: rem(24);
+		line-height: rem(30);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(20);
+		line-height: rem(25);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(16);
+		line-height: rem(20);
+	}
+}
+
+@mixin heading6 {
+	font-family: $font;
+	font-size: rem(20);
+	line-height: rem(25.1);
+	font-weight: 700;
+
+	@media (max-width: 1440px) {
+		font-size: rem(17);
+		line-height: rem(21.25);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(14);
+		line-height: rem(17.5);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(11);
+		line-height: rem(13.75);
+	}
+}
+
+@mixin p15 {
+	font-family: $font;
+	font-size: rem(15);
+	line-height: rem(19.53);
+	font-weight: 400;
+
+	@media (max-width: 1440px) {
+		font-size: rem(13);
+		line-height: rem(16.25);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(11);
+		line-height: rem(13.75);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(9);
+		line-height: rem(11.25);
+	}
+}
+
+@mixin p20 {
+	font-family: $font;
+	font-size: rem(20);
+	line-height: rem(38);
+	& {
+		font-weight: 400;
+	}
+
+	@media (max-width: 1440px) {
+		font-size: rem(17);
+		line-height: rem(32.5);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(14);
+		line-height: rem(26.25);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(11);
+		line-height: rem(21.25);
+	}
+}
+
+@mixin p26 {
+	font-family: $font;
+	font-size: rem(26);
+	line-height: rem(42);
+	font-weight: 400;
+
+	@media (max-width: 1440px) {
+		font-size: rem(22);
+		line-height: rem(35);
+	}
+
+	@media (max-width: 768px) {
+		font-size: rem(18);
+		line-height: rem(28.75);
+	}
+
+	@media (max-width: 480px) {
+		font-size: rem(14);
+		line-height: rem(22.5);
+	}
+
+}

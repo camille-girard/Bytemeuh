@@ -1,0 +1,11 @@
+/* admin-styles.css */
+#custom_section_meta_box input,
+#custom_section_meta_box textarea {
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+#custom_section_meta_box label {
+    font-weight: 500;
+    line-height: 22px;
+}

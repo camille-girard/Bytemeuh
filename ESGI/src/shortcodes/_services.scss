@@ -1,0 +1,72 @@
+.services-section {
+    h2 {
+        @include heading2;
+        color: var(--main-color);
+        margin-left: rem(156);
+
+        @media (max-width: 1440px) {
+            margin-left: rem(80);
+        }
+
+        @media (max-width: 768px) {
+            margin-left: rem(40);
+        }
+
+        @media (max-width: 480px) {
+            margin-left: rem(20);
+        }
+    }
+
+
+    .custom-image-section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .image-box {
+            flex: 1 1 25%;
+            max-width: 25%;
+            height: auto;
+
+            &.text-box {
+                h4 {
+                    @include heading4;
+                    color: var(--main-color);
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: rem(-2);
+                        width: 100%;
+                        height: rem(5);
+                        background: var(--accent);
+                    }
+                }
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .custom-image-section {
+            flex-direction: column;
+
+            .image-box {
+                flex: 1 1 auto;
+                max-width: none;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

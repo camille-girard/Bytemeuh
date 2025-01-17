@@ -1,0 +1,122 @@
+footer {
+    @include p15;
+    color: var(--white);
+    background-color: var(--main-color);
+    @media (min-width: 1440px) {
+        height: rem(397);
+    }
+    @media (min-width: 768px) {
+        height: rem(700);
+    }
+
+    @media (min-width: 480px) {
+        height: rem(500);
+    }
+    .container {
+        margin: 0 rem(159);
+
+        @media (max-width: 1440px) {
+            margin: 0 rem(100);
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 rem(50);
+        }
+
+        @media (max-width: 480px) {
+            margin: 0 rem(20);
+        }
+
+        .container-footer, .container-footer-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+
+        .container-footer {
+            padding-top: rem(70);
+            padding-bottom: rem(50);
+
+            @media (max-width: 768px) {
+                padding-top: rem(50);
+                padding-bottom: rem(30);
+            }
+
+            .contact-footer {
+                display: flex;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .contact-footer-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    padding-right: rem(75);
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    @media (max-width: 768px) {
+                        align-items: center;
+                        padding-right: 0;
+                        margin-bottom: rem(20);
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: var(--white);
+                    }
+
+                    h5 {
+                        font-size: rem(20);
+
+                        @media (max-width: 480px) {
+                            font-size: rem(18);
+                        }
+                    }
+
+                    p {
+                        color: var(--white);
+                        margin: 0 0 rem(5) 0;
+                        @include p20;
+
+                        @media (max-width: 480px) {
+                            font-size: rem(16);
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-footer-footer {
+            .rs {
+                ul {
+                    @include resetList;
+                    @include flexbox(row, nowrap, center, center, rem(25));
+
+                    @media (max-width: 768px) {
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    }
+
+                    a {
+                        @include resetLink;
+                        margin: rem(5);
+
+                        @media (max-width: 480px) {
+                            margin: rem(3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

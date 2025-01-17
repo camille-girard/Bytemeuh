@@ -1,0 +1,44 @@
+body.error-404 header#main-header {
+  background-color: var(--main-color);
+}
+body.error-404 {
+  background-color: var(--main-color);
+}
+
+#main-404 {
+  background-color: var(--main-color);
+  .page-404{
+    .content-404 {
+      padding: rem(48) rem(159);
+      color: var(--white);
+      h1 {
+        color: var(--white);
+      }
+      p {
+        color: var(--white);
+      }
+      .search-form {
+        label {
+          display: flex;
+          justify-content: space-between;
+          width: rem(1051);
+          padding: rem(10);
+          border: none;
+          border-bottom: rem(1) solid rgba(255, 255, 255, 0.2977);
+          font-family: "Mulish", sans-serif;
+          .search-field {
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.2977);
+            @include p20;
+          }
+        }
+      }
+    }
+  }
+}
+.error-404.customize-support {
+  background-color: var(--main-color);
+  overflow: hidden;
+}

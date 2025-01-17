@@ -1,0 +1,130 @@
+.section-custom {
+    margin-top: rem(160);
+    margin-bottom: rem(160);
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: rem(80);
+
+    @media (max-width: 768px) {
+        margin-top: rem(80);
+    }
+
+    @media (max-width: 480px) {
+        margin-top: rem(40);
+    }
+    .about-us{
+        display: flex;
+        gap: rem(160);
+
+        img {
+            max-width: 45%;
+        }
+
+        .custom-informations {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+    }
+
+    .information-section {
+        h2 {
+            @include heading2;
+            color: var(--main-color); // Adjust color as needed
+            margin-bottom: 0;
+        }
+        h3 {
+            @include heading3;
+            color: var(--main-color); // Adjust color as needed
+            margin-bottom: 0;
+        }
+
+        p {
+            @include p20;
+            color: var(--grey); // Adjust color as needed
+        }
+
+        &.intro {
+            width: 45%;
+            display: block;
+            margin-left: 35%;
+        }
+}
+
+}
+
+
+@media (max-width: 1440px) {
+    .section-custom {
+        width: 90%;
+        .about-us{
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+
+    .custom-informations,
+    img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-custom {
+        width: 100%;
+        .about-us{
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    img,
+    .custom-informations {
+        width: 70%;
+        max-width: 100%;
+    }
+
+    img {
+        margin-bottom: rem(32);
+    }
+
+    .custom-informations {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .information-section {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        max-width: 80%;
+    }
+
+    .custom-informations {
+        width: 90%;
+    }
+}
+
+#main-content.about-us {
+    .featured-image {
+        img {
+            @media (max-width: 768px) {
+                margin-top: rem(80);
+            }
+            @media (max-width: 480px) {
+                margin-top: rem(40);
+            }
+        }
+    }
+}

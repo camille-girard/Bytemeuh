@@ -1,0 +1,121 @@
+.header-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 999;
+}
+
+header {
+  .container {
+    .container-header {
+      padding: rem(48) rem(159);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media (max-width: 1440px) {
+        padding: rem(40) rem(100);
+      }
+
+      @media (max-width: 768px) {
+        padding: rem(30) rem(50);
+        flex-direction: row;
+      }
+
+      @media (max-width: 480px) {
+        padding: rem(20) rem(20);
+      }
+
+      .menu {
+        .open-menu {
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-end;
+
+          @media (max-width: 768px) {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+
+  .main-menu {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+
+    a {
+      @include heading2;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: rem(5);
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: rem(5);
+        left: 0;
+        bottom: 0;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        @include heading3;
+      }
+
+      @media (max-width: 480px) {
+        @include heading4;
+      }
+    }
+
+    ul {
+      list-style: none;
+      text-align: right;
+
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+    }
+  }
+
+  .close-menu-button {
+    display: block;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      align-self: flex-end;
+    }
+
+    @media (max-width: 480px) {
+      align-self: flex-end;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .main-menu {
+      &.active {
+        a {
+          @include heading2;
+        }
+      }
+    }
+  }
+}
